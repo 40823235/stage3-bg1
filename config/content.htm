@@ -178,7 +178,8 @@ print(output)
 <p><strong>步驟二:<br/>點擊右方開始串流且youtube點選直播即可完成。 備註:youtube第一次直播需等待24H<br/>如需備份可同時點選下方的開始錄製或者至YOUTUBE下載直播檔。<br/><img alt="" height="400" src="/images/1620829644531.jpg" width="600"/><br/></strong></p>
 <p><strong>問題:<br/>(1.)錄製現場聲音過於吵雜。</strong></p>
 <p><strong>解決辦法:點選音訊源，點擊濾鏡。<br/><img alt="" height="400" src="/images/1620829938158.jpg" width="600"/><br/>選擇雜訊抑制即可有效改善錄音現況。<br/><img alt="" height="400" src="/images/1620829997892.jpg" width="600"/><br/></strong></p>
-<p><strong>(2.)顯示器擷取是黑屏<br/>參考資料:<a href="https://russquan.gitlab.io/obs-black-screen-fix-win10/">https://russquan.gitlab.io/obs-black-screen-fix-win10/</a></strong></p><h1>TASK2測試區</h1>
+<p><strong>(2.)顯示器擷取是黑屏<br/>參考資料:<a href="https://russquan.gitlab.io/obs-black-screen-fix-win10/">https://russquan.gitlab.io/obs-black-screen-fix-win10/</a></strong></p>
+<h1>TASK2測試區</h1>
 <p><strong>主題:生產線</strong></p>
 <p><strong>大綱:</strong><br/><strong>有很多大大小小的箱子在一個轉軸（旋轉飛船原型）上，透過夾抓（40823234夾爪）將貨放到輸送帶上，然後利用分大小的機器（分球機原型）把每個貨物分到不同位子，再利用堆高機（40823245-stage2）把其中一個貨放到另一個地方，然後那一個貨裡面就是產品（裝掃地機器人）</strong><b><br/></b></p>
 <h2>掃地機器人</h2>
@@ -491,7 +492,44 @@ if clientID !=-1:
 else:
     print ('Failed connecting to  remote API server')
 print ('End')</pre>
-<p></p><h1>小組影片</h1>
+<p></p>
+<h2>遊樂設施</h2>
+<p><strong>測試人員:40823232    日期:2021/05/14</strong></p>
+<p>成功驅動</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Fl1O_Nr4s-M" title="YouTube video player" width="560"></iframe></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sim as vrep
+import math
+import random
+import time
+  
+print ('Start')
+  
+# Close eventual old connections
+vrep.simxFinish(-1)
+# Connect to V-REP remote server
+clientID = vrep.simxStart('192.168.192.115', 19997, True, True, 5000, 5)
+  
+if clientID != -1:
+    print ('Connected to remote API server')
+  
+    res = vrep.simxAddStatusbarMessage(
+        clientID, "40823232",
+        vrep.simx_opmode_oneshot)
+    if res not in (vrep.simx_return_ok, vrep.simx_return_novalue_flag):
+        print("Could not add a message to the status bar.")
+    # Communication operating mode with the remote API : wait for its answer before continuing (blocking mode)
+    # http://www.coppeliarobotics.com/helpFiles/en/remoteApiConstants.htm
+    opmode = vrep.simx_opmode_oneshot_wait
+  
+    # Try to retrieve motors and robot handlers
+    # http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm#simxGetObjectHandle
+    vrep.simxStartSimulation(clientID,opmode)
+    ret1,front_handle = vrep.simxGetObjectHandle(clientID, "Revolute_joint", opmode)
+     
+ 
+else:
+    print ('Failed connecting to remote API server')</pre>
+<h1>小組影片</h1>
 <p>第九週<br/><iframe allowfullscreen="allowfullscreen" height="300" src="//www.youtube.com/embed/DBZx-dGqLOI" width="400"></iframe></p>
 <p>第十週<br/>(1)連接ipv4<br/><iframe allowfullscreen="allowfullscreen" height="300" src="//www.youtube.com/embed/ZfsVqRFf2gI" width="400"></iframe><br/>(2)task1教學<br/><iframe allowfullscreen="allowfullscreen" height="300" src="//www.youtube.com/embed/eAf-Pi5OgB0" width="400"></iframe></p>
 <h1>直播影片</h1>
