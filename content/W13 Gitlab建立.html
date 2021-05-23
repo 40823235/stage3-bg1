@@ -2,7 +2,7 @@
         <head>
         <title>stage3-bg1</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,90 +134,104 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">小組影片-1 << <a href='小組影片-1.html'>Previous</a> <a href='遊樂設施-2.html'>Next</a> >> 遊樂設施-2<br /><h1>直播影片-1</h1>
-<h4>W11     日期:2021/05/07</h4>
-<h4>直播人員: 40823208 李翊帆 40823213 王鼎鈞</h4>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/yEfYtkTvw-Q" title="YouTube video player" width="560"></iframe></p>
-<h4>直播人員: 40823245 林浩瑋 40823251 林進益<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/Dxkn_nVT4F8" width="560"></iframe></h4>
-<h4>W12     日期:2021/05/14</h4>
-<h4>直播人員: 40823208 李翊帆 40823235 邱璽<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/PCDypBPIAkA" width="560"></iframe><br/><strong></strong></h4>
-<h4>直播人員: 40823246 朱晉賢 40823251 林進益<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/tY4AV3i3Ano" width="560"></iframe></h4>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<h4><strong></strong></h4>
-<p>t",opmode) vrep.simxSetJointTargetVelocity(clientID,wristHandle,1,opmode) ret, wristHandle = vrep.simxGetObjectHandle(clientID, "joint",opmode) vrep.simxSetJointTargetVelocity(clientID,wristHandle,1,opmode) else: print ('Failed connecting to remote API server') print ('End')</p>
-<p></p>
-<p><strong>測試人員:40823234     日期:2021/05/10</strong></p>
-<p><strong>第二版 使用python keyboard  檔案下載:<a href="./../downloads/remote api.zip">remote api.zip</a></strong></p>
-<p><strong><iframe allowfullscreen="allowfullscreen" height="300" src="//www.youtube.com/embed/qUfPGBOkqMo" width="500"></iframe></strong></p>
-<p><strong></strong></p>
-<p><strong>使用keyboard程式:</strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sim as vrep
-import math
-import random
-import time
-import keyboard
-  
-print ('Start')
-  
-# Close eventual old connections
-vrep.simxFinish(-1)
-# Connect to V-REP remote server
-clientID = vrep.simxStart('192.168.1.114', 19997, True, True, 5000, 5)
- 
-if clientID !=-1:
-    print ('Connected to remote API server')
-  
-    res = vrep.simxAddStatusbarMessage(
-        clientID, "40823234",
-        vrep.simx_opmode_oneshot)
-         
-    if res not in (vrep.simx_return_ok, vrep.simx_return_novalue_flag):
-        print("Could not add a message to the status bar.")
-         
-    opmode = vrep.simx_opmode_oneshot_wait
-    vrep.simxStartSimulation(clientID, opmode)
-    ret,vertical_handle=vrep.simxGetObjectHandle(clientID,"VerticalJoint",opmode)#設定軸對應名稱
-    ret,spirit_handle=vrep.simxGetObjectHandle(clientID,"SpiritJoint",opmode)
-    ret,cam_handle=vrep.simxGetObjectHandle(clientID,"joint",opmode)
-    while True:
-        #keyboard "w" 前進
-     if keyboard.is_pressed("w"):
-            print("You pressed w")
-           
-            vrep.simxSetJointTargetVelocity(clientID,vertical_handle,0.1,opmode)
-     if keyboard.is_pressed("s"):#keyboard "s" 後退
-            print("You pressed s")
-           
-            vrep.simxSetJointTargetVelocity(clientID,vertical_handle,-0.1,opmode)
-     if keyboard.is_pressed("a"):#keyboard "a"向左 
-            print("You pressed a")
-           
-            vrep.simxSetJointTargetVelocity(clientID,spirit_handle,0.1,opmode)
-     if keyboard.is_pressed("d"):#keyboard "d" 向右
-            print("You pressed d")
-           
-            vrep.simxSetJointTargetVelocity(clientID,spirit_handle,-0.1,opmode)
-     if keyboard.is_pressed("q"):#keyboard "q" 前進後退停止
-            print("You pressed q")
-           
-            vrep.simxSetJointTargetVelocity(clientID,vertical_handle,0,opmode)
-     if keyboard.is_pressed("e"):#keyboard "e" 左右停止
-            print("You pressed e")
-           
-            vrep.simxSetJointTargetVelocity(clientID,spirit_handle,0,opmode) 
-     if keyboard.is_pressed("r"):#keyboard "r" 凸輪轉動
-            print("You pressed r")
-           
-            vrep.simxSetJointTargetVelocity(clientID,cam_handle,1,opmode)   
-     if keyboard.is_pressed("f"):#keyboard "f" 凸輪停止
-            print("You pressed f")
-           
-            vrep.simxSetJointTargetVelocity(clientID,cam_handle,0,opmode)        
-else:
-    print ('Failed connecting to  remote API server')
-print ('End')</pre>
-<p></p>
-<br />小組影片-1 << <a href='小組影片-1.html'>Previous</a> <a href='遊樂設施-2.html'>Next</a> >> 遊樂設施-2</div>
+    <div id="tipue_search_content">W12 上課直播 << <a href='W12 上課直播.html'>Previous</a> <a href='gitlab-ssh.html'>Next</a> >> gitlab-ssh<br /><h1>W13 Gitlab建立</h1>
+<p><strong>測試人員:40823245</strong></p>
+<p><strong>注:由於40823245的github被封，故由組員代替push。<br/></strong></p>
+<h4>gitlab步驟影片版本(用stage2-bg1做示範)</h4>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" src="https://www.youtube.com/embed/3eU8ow9xd_A" title="YouTube video player" width="560"></iframe></p>
+<h4><a href="https://gitlab.com/users/sign_up">創建gitlab帳號</a></h4>
+<h4>username:40823245</h4>
+<h4>email:40823245@gm.nfu.edu.tw</h4>
+<h4>新增空的倉儲</h4>
+<p><img alt="" height="200" src="https://40823245.gitlab.io/cd2021/images/gitlab.png" width="1000"/></p>
+<p><img alt="" height="400" src="https://40823245.gitlab.io/cd2021/images/gitlab-1.png" width="800"/></p>
+<h4>輸入要同步過來的倉儲名稱(我用stage3-bg1當例子)</h4>
+<h4>下面勾公開和不要有內建(空倉儲)</h4>
+<p><img alt="" height="500" src="https://40823245.gitlab.io/cd2021/images/gitlab-2.png" width="900"/></p>
+<h4>建完會看到下圖</h4>
+<p><img alt="" height="500" src="https://40823245.gitlab.io/cd2021/images/gitlab-3.png" width="700"/></p>
+<h4>在對應的資料夾輸入git branch確認主分支</h4>
+<p><img alt="" height="150" src="https://40823245.gitlab.io/cd2021/images/gitlab-4.png" width="400"/></p>
+<h4>如果無yml檔就建立，有yml檔就改(master→main)</h4>
+<p><img alt="" height="300" src="https://40823245.gitlab.io/cd2021/images/gitlab-5.png" width="300"/></p>
+<h4>yml程式碼(檔名要存yml)</h4>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_979468">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">pages:</code></div>
+<div class="line number2 index1 alt1"><code class="html spaces">  </code><code class="html plain">stage: deploy</code></div>
+<div class="line number3 index2 alt2"><code class="html spaces">  </code><code class="html plain">script:</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">  </code><code class="html plain">- mkdir .public</code></div>
+<div class="line number5 index4 alt2"><code class="html spaces">  </code><code class="html plain">- cp -r * .public</code></div>
+<div class="line number6 index5 alt1"><code class="html spaces">  </code><code class="html plain">- mv .public public</code></div>
+<div class="line number7 index6 alt2"><code class="html spaces">  </code><code class="html plain">artifacts:</code></div>
+<div class="line number8 index7 alt1"><code class="html spaces">    </code><code class="html plain">paths:</code></div>
+<div class="line number9 index8 alt2"><code class="html spaces">    </code><code class="html plain">- public</code></div>
+<div class="line number10 index9 alt1"><code class="html spaces">  </code><code class="html plain">only:</code></div>
+<div class="line number11 index10 alt2"><code class="html spaces">  </code><code class="html plain">- main</code></div>
+<div class="line number12 index11 alt1"><code class="html plain">variables:</code></div>
+<div class="line number13 index12 alt2"><code class="html spaces">  </code><code class="html plain">GIT_SUBMODULE_STRATEGY: recursive</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4>推推看</h4>
+<p><img alt="" height="350" src="https://40823245.gitlab.io/cd2021/images/gitlab-6.png" width="700"/></p>
+<h4>再檢查一次主分之</h4>
+<h4>git remote到gitlab</h4>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_456234">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">git remote add gitlab https://gitlab.com/40823245/stage3-bg1.git</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4>推到gitlab</h4>
+<p><img alt="" height="200" src="https://40823245.gitlab.io/cd2021/images/gitlab-7.png" width="600"/></p>
+<h4>可以看到gitlab為下圖</h4>
+<p><img alt="" height="450" src="https://40823245.gitlab.io/cd2021/images/gitlab-8.png" width="800"/></p>
+<h4>commit紀錄都在</h4>
+<p><img alt="" height="400" src="https://40823245.gitlab.io/cd2021/images/gitlab-9.png" width="800"/></p>
+<h4>到設定找到gitlab同步後的網址</h4>
+<p><img alt="" height="600" src="https://40823245.gitlab.io/cd2021/images/gitlab-10.png" width="300"/></p>
+<h4>若沒顯示下圖請重整頁面，它需要時間轉</h4>
+<p><img alt="" height="500" src="https://40823245.gitlab.io/cd2021/images/gitlab-11.png" width="600"/></p>
+<h4>點連結可看到同步的頁面和網址</h4>
+<p><img alt="" height="600" src="https://40823245.gitlab.io/cd2021/images/gitlab-12.png" width="800"/></p>
+<br />W12 上課直播 << <a href='W12 上課直播.html'>Previous</a> <a href='gitlab-ssh.html'>Next</a> >> gitlab-ssh</div>
         
     <!-- footer -->
       <div class="container">

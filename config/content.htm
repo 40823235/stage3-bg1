@@ -179,7 +179,110 @@ print(output)
 <p><strong>問題:<br/>(1.)錄製現場聲音過於吵雜。</strong></p>
 <p><strong>解決辦法:點選音訊源，點擊濾鏡。<br/><img alt="" height="400" src="/images/1620829938158.jpg" width="600"/><br/>選擇雜訊抑制即可有效改善錄音現況。<br/><img alt="" height="400" src="/images/1620829997892.jpg" width="600"/><br/></strong></p>
 <p><strong>(2.)顯示器擷取是黑屏<br/>參考資料:<a href="https://russquan.gitlab.io/obs-black-screen-fix-win10/">https://russquan.gitlab.io/obs-black-screen-fix-win10/</a></strong></p>
-<h1>TASK2測試區</h1>
+<h2>W12 上課直播</h2>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="300" src="https://www.youtube.com/embed/PCDypBPIAkA" width="400"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="300" src="https://www.youtube.com/embed/tY4AV3i3Ano" width="400"></iframe></p>
+<h2>W13 Gitlab建立</h2>
+<p><strong>測試人員:40823245</strong></p>
+<p><strong>注:由於40823245的github被封，故由組員代替push。<br/></strong></p>
+<h4>gitlab步驟影片版本(用stage2-bg1做示範)</h4>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" src="https://www.youtube.com/embed/3eU8ow9xd_A" title="YouTube video player" width="560"></iframe></p>
+<h4><a href="https://gitlab.com/users/sign_up">創建gitlab帳號</a></h4>
+<h4>username:40823245</h4>
+<h4>email:40823245@gm.nfu.edu.tw</h4>
+<h4>新增空的倉儲</h4>
+<p><img alt="" height="200" src="https://40823245.gitlab.io/cd2021/images/gitlab.png" width="1000"/></p>
+<p><img alt="" height="400" src="https://40823245.gitlab.io/cd2021/images/gitlab-1.png" width="800"/></p>
+<h4>輸入要同步過來的倉儲名稱(我用stage3-bg1當例子)</h4>
+<h4>下面勾公開和不要有內建(空倉儲)</h4>
+<p><img alt="" height="500" src="https://40823245.gitlab.io/cd2021/images/gitlab-2.png" width="900"/></p>
+<h4>建完會看到下圖</h4>
+<p><img alt="" height="500" src="https://40823245.gitlab.io/cd2021/images/gitlab-3.png" width="700"/></p>
+<h4>在對應的資料夾輸入git branch確認主分支</h4>
+<p><img alt="" height="150" src="https://40823245.gitlab.io/cd2021/images/gitlab-4.png" width="400"/></p>
+<h4>如果無yml檔就建立，有yml檔就改(master→main)</h4>
+<p><img alt="" height="300" src="https://40823245.gitlab.io/cd2021/images/gitlab-5.png" width="300"/></p>
+<h4>yml程式碼(檔名要存yml)</h4>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_979468">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">pages:</code></div>
+<div class="line number2 index1 alt1"><code class="html spaces">  </code><code class="html plain">stage: deploy</code></div>
+<div class="line number3 index2 alt2"><code class="html spaces">  </code><code class="html plain">script:</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">  </code><code class="html plain">- mkdir .public</code></div>
+<div class="line number5 index4 alt2"><code class="html spaces">  </code><code class="html plain">- cp -r * .public</code></div>
+<div class="line number6 index5 alt1"><code class="html spaces">  </code><code class="html plain">- mv .public public</code></div>
+<div class="line number7 index6 alt2"><code class="html spaces">  </code><code class="html plain">artifacts:</code></div>
+<div class="line number8 index7 alt1"><code class="html spaces">    </code><code class="html plain">paths:</code></div>
+<div class="line number9 index8 alt2"><code class="html spaces">    </code><code class="html plain">- public</code></div>
+<div class="line number10 index9 alt1"><code class="html spaces">  </code><code class="html plain">only:</code></div>
+<div class="line number11 index10 alt2"><code class="html spaces">  </code><code class="html plain">- main</code></div>
+<div class="line number12 index11 alt1"><code class="html plain">variables:</code></div>
+<div class="line number13 index12 alt2"><code class="html spaces">  </code><code class="html plain">GIT_SUBMODULE_STRATEGY: recursive</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4>推推看</h4>
+<p><img alt="" height="350" src="https://40823245.gitlab.io/cd2021/images/gitlab-6.png" width="700"/></p>
+<h4>再檢查一次主分之</h4>
+<h4>git remote到gitlab</h4>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_456234">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">git remote add gitlab https://gitlab.com/40823245/stage3-bg1.git</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4>推到gitlab</h4>
+<p><img alt="" height="200" src="https://40823245.gitlab.io/cd2021/images/gitlab-7.png" width="600"/></p>
+<h4>可以看到gitlab為下圖</h4>
+<p><img alt="" height="450" src="https://40823245.gitlab.io/cd2021/images/gitlab-8.png" width="800"/></p>
+<h4>commit紀錄都在</h4>
+<p><img alt="" height="400" src="https://40823245.gitlab.io/cd2021/images/gitlab-9.png" width="800"/></p>
+<h4>到設定找到gitlab同步後的網址</h4>
+<p><img alt="" height="600" src="https://40823245.gitlab.io/cd2021/images/gitlab-10.png" width="300"/></p>
+<h4>若沒顯示下圖請重整頁面，它需要時間轉</h4>
+<p><img alt="" height="500" src="https://40823245.gitlab.io/cd2021/images/gitlab-11.png" width="600"/></p>
+<h4>點連結可看到同步的頁面和網址</h4>
+<p><img alt="" height="600" src="https://40823245.gitlab.io/cd2021/images/gitlab-12.png" width="800"/></p>
+<h3>gitlab-ssh</h3>
+<h4>gitlab新增ssh影片操作</h4>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" data-mce-fragment="1" frameborder="0" height="315" src="https://www.youtube.com/embed/X_YCzXp6uw4" title="YouTube video player" width="560"></iframe></p>
+<h4>基本和原本做ssh方法一樣，只是把github改成gitlab，和到gitlab設定ssh</h4><h1>TASK2測試區</h1>
 <p><strong>主題:生產線</strong></p>
 <p><strong>大綱:</strong><br/><strong>有很多大大小小的箱子在一個轉軸（旋轉飛船原型）上，透過夾抓（40823234夾爪）將貨放到輸送帶上，然後利用分大小的機器（分球機原型）把每個貨物分到不同位子，再利用堆高機（40823245-stage2）把其中一個貨放到另一個地方，然後那一個貨裡面就是產品（裝掃地機器人）。</strong><b><br/></b></p>
 <h2>掃地機器人</h2>
@@ -540,6 +643,7 @@ else:
 <h4>W12     日期:2021/05/14</h4>
 <h4>直播人員: 40823208 李翊帆 40823235 邱璽<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/PCDypBPIAkA" width="560"></iframe><br/><strong></strong></h4>
 <h4>直播人員: 40823246 朱晉賢 40823251 林進益<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/tY4AV3i3Ano" width="560"></iframe></h4>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 <h4><strong></strong></h4>
 <p>t",opmode) vrep.simxSetJointTargetVelocity(clientID,wristHandle,1,opmode) ret, wristHandle = vrep.simxGetObjectHandle(clientID, "joint",opmode) vrep.simxSetJointTargetVelocity(clientID,wristHandle,1,opmode) else: print ('Failed connecting to remote API server') print ('End')</p>
 <p></p>
@@ -661,6 +765,8 @@ else:
 <h4>W12     日期:2021/05/14</h4>
 <h4>直播人員: 40823208 李翊帆 40823235 邱璽<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/PCDypBPIAkA" width="560"></iframe><br/><strong></strong></h4>
 <h4>直播人員: 40823246 朱晉賢 40823251 林進益<br/><iframe allowfullscreen="allowfullscreen" height="315" src="//www.youtube.com/embed/tY4AV3i3Ano" width="560"></iframe></h4>
+=======
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; ef29dc91c93a04ab456d11215d71feeb38104aef
 <p><strong>日期:2021/05/21<br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="315" src="https://www.youtube.com/embed/XYh2GjPH3Rg" width="560"></iframe></strong></p>
 <p><strong><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="315" src="https://www.youtube.com/embed/GJ1GiBV8N48" width="560"></iframe></strong></p>
 <h4><strong></strong></h4>
